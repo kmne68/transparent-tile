@@ -16,8 +16,8 @@ import javax.swing.JComponent;
  */
 public class Map extends JComponent {
     
-    public int tileWidth = 30;
-    public int tileHeight = 30;
+    public int tileWidth = 10;
+    public int tileHeight = 10;
     public int mapLength = 10;
     public int mapWidth = 10;
     
@@ -34,8 +34,8 @@ public class Map extends JComponent {
         float thickness = 3;
   //      g2d.setStroke(new BasicStroke(thickness));
         
-            for(int i = 0; i <= 5; i++) {   
-                for (int j = 0; j <= 5; j++) {
+            for(int i = 0; i < 30; i++) {   
+                for (int j = 0; j < 30; j++) {
                     g2d.setColor(Color.black);
                     g2d.drawRect(i * tileWidth, j * tileHeight, tileWidth, tileHeight);
                     g2d.setStroke(new BasicStroke(thickness));
