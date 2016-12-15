@@ -4,6 +4,8 @@
  */
 package dragon;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -11,6 +13,9 @@ import javax.swing.JPanel;
  * @author Keith
  */
 public class StartPanel extends JPanel {
+    
+    private JButton btnStart;
+    private JLabel lblTitle;
     
     private StartPanelListener listener;
     
@@ -22,17 +27,17 @@ public class StartPanel extends JPanel {
     @SuppressWarnings("unchecked")
     private void initComponents() {
         
-        jLabelTitle = new javax.swing.JLabel();
-        jButtonStart = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+        btnStart = new javax.swing.JButton();
         
-        jLabelTitle.setFont(new java.awt.Font("Lucida Grande", 0, 24));
-        jLabelTitle.setText("Dragon");
+        lblTitle.setFont(new java.awt.Font("Lucida Grande", 0, 24));
+        lblTitle.setText("Dragon");
         
-        jButtonStart.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jButtonStart.setText("Start");
-        JButtonStart.addActionListener(new java.awt.event.ActionListener() {
+        btnStart.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        btnStart.setText("Start");
+        btnStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonStartActionPerformed(evt);
+                btnStartActionPerformed(evt);
             }
         });  
         
@@ -43,26 +48,39 @@ public class StartPanel extends JPanel {
                 .addContainerGap(151, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jButtonStart)
+                .addComponent(btnStart)
                 .addGap(141, 141, 141))
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabelTitle)
+                .addComponent(lblTitle)
                 .addGap(108, 108, 108)))
                 );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                 .addGap(101, 101, 101)
-                .addComponent(jLabelTitle)
+                .addComponent(lblTitle)
                 .addGap(18, 18, 18)
-                .addComponent(jButtonStart)
+                .addComponent(btnStart)
                 .addContainerGap(121, Short.MAX_VALUE))
                 );
     }
     
-    private void jButtonActionPerformed(java.awt.event.ActionEvent evt)
-            System.out.println("Hello");
-    fireStartGame();
+    private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {
+        
+        System.out.println("Hello");
+        fireStartGame();
+    }
     
+    
+    public void setLisener(StartPanelListener listener) {
+        
+        this.listener = listener;
+    }
+    
+    
+    private void fireStartGame() {
+        
+        if(listener != null) listener.startGame();
+    }
    
 }
