@@ -72,7 +72,7 @@ public class StartPanel extends JPanel {
     }
     
     
-    public void setLisener(StartPanelListener listener) {
+    public void setListener(StartPanelListener listener) {
         
         this.listener = listener;
     }

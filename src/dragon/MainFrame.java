@@ -4,6 +4,7 @@
  */
 package dragon;
 
+import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -32,12 +33,13 @@ public class MainFrame extends JFrame implements ActionListener {
             System.out.println("Cannot set look and feel");
         }
         
-        cards = new CardLayout();
+        card = new CardLayout();
         startPanel = new StartPanel();
         game = new Game();
         
         startPanel.setListener(new StartPanelListener() {
             
+            @Override
             public void startGame() {
                 
                 card.show(MainFrame.this.getContentPane(), "game");
@@ -45,7 +47,7 @@ public class MainFrame extends JFrame implements ActionListener {
         });
         
         timer = new Timer(20, this);
-        timer.setInialDelay(100);
+        timer.setInitialDelay(100);
         
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

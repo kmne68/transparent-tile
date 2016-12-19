@@ -9,13 +9,21 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
-public class Main extends JPanel {
+public class App {
 
-    public static void main(String[] a, Object Graphics) {
+    public static void main(String[] args) {
        
+        SwingUtilities.invokeLater(new Runnable() {
+            
+            public void run() {
+                
+                new MainFrame();
+            }
+        });
         //   Map map = new Map();
-        Graphics2D g2d = null;
+  /**      Graphics2D g2d = null;
         Entity dragon = new Entity(6, 6, 3);
 
         JFrame f = new JFrame();
@@ -23,7 +31,7 @@ public class Main extends JPanel {
         f.add(new Map());
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);      
-
+**/
         
         
 
