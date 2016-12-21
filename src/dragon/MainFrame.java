@@ -22,7 +22,8 @@ public class MainFrame extends JFrame implements ActionListener {
     long relativeTime;
     private Game game;
     private StartPanel startPanel;
-    private CardLayout card;
+    private CardLayout cards;
+    private Map map;
     
     MainFrame() {
         super("Dragon");
@@ -33,21 +34,31 @@ public class MainFrame extends JFrame implements ActionListener {
             System.out.println("Cannot set look and feel");
         }
         
-        card = new CardLayout();
+        cards = new CardLayout();
         startPanel = new StartPanel();
         game = new Game();
+        map = new Map();
         
         startPanel.setListener(new StartPanelListener() {
             
             @Override
             public void startGame() {
                 
-                card.show(MainFrame.this.getContentPane(), "game");
+                cards.show(MainFrame.this.getContentPane(), "game");
             }
         });
         
         timer = new Timer(20, this);
         timer.setInitialDelay(100);
+        
+        setSize(600, 500);
+        setLayout(cards);
+        
+        add(startPanel, "start");
+     //   add(map, "map");
+        add(game, "game");
+        
+        timer.start();
         
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
