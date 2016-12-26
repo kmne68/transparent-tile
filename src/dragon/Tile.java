@@ -75,7 +75,7 @@ public class Tile {
         return type;
     }
     
-    public void setType(TileType) {
+    public void setType(TileType type) {
         this.type = type;
     }
 }

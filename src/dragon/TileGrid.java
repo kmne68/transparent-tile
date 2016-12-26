@@ -19,7 +19,7 @@ public class TileGrid {
         {
             for(int j = 0; j < map[i].length; j++)
             {
-                map[i][j] = new Tile(i * 64, j * 64, 64, 64, TileType.DEFAULT);                
+                map[i][j] = new Tile(i * 64, j * 64, 64, 64, TileType.Vegetation);                
             }
         }
     }
@@ -42,7 +42,7 @@ public class TileGrid {
         {
             for (int j = 0; j < map[i].length; j++)
             {
-                map[i][j].Draw;
+                map[i][j].Draw();
             }
         }
     }
