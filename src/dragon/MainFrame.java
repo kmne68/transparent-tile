@@ -55,8 +55,8 @@ public class MainFrame extends JFrame implements ActionListener {
         setLayout(cards);
         
         add(startPanel, "start");
-     //   add(map, "map");
-        add(game, "game");
+        add(map, "map");
+ //       add(game, "game");
         
         timer.start();
         

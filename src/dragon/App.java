@@ -17,9 +17,13 @@ public class App {
        
         SwingUtilities.invokeLater(new Runnable() {
             
+            @Override
             public void run() {
                 
-                new MainFrame();
+                MainFrame mainFrame = new MainFrame();
+                Map map = new Map();
+                mainFrame.add(map);
+                
             }
         });
         //   Map map = new Map();

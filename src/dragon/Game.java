@@ -32,6 +32,8 @@ public class Game extends JComponent {
     private Ellipse2D.Double dragon = new Ellipse2D.Double(100, 100, 15, 15);
     private RoundRectangle2D.Double character = new RoundRectangle2D.Double(200, 200, 100, 10, 20, 20);
     
+    private Map map = new Map();
+    
     private double speed = 10.0;
     private int xDirectionDragon = 1;
     private int yDirectionDragon = 1;
@@ -110,9 +112,12 @@ public class Game extends JComponent {
             buffer = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
         }
         
+  //      map.paint(g);
+        
         Graphics2D g2 = (Graphics2D) buffer.getGraphics();
         
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setRenderingHint
+                (RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         g2.setColor(Color.BLACK);
         
