@@ -16,8 +16,8 @@ import javax.swing.JComponent;
  */
 public class Map extends JComponent {
     
-    public int tileWidth = 10;
-    public int tileHeight = 10;
+    public int tileWidth = 8;
+    public int tileHeight = 12;
     public int mapLength = 10;
     public int mapWidth = 10;
     
@@ -43,7 +43,7 @@ public class Map extends JComponent {
                     g2d.fillRect(i * tileWidth, j * tileHeight, tileWidth, tileHeight);  
                 }
             } 
-    }
+    } 
 }
 
 /*Graphics2D g2;

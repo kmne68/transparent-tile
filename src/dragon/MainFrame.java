@@ -15,6 +15,8 @@ import javax.swing.UIManager;
  *
  * @author Keith
  */
+
+/*
 public class MainFrame extends JFrame implements ActionListener {
     
     private Timer timer;
@@ -48,7 +50,7 @@ public class MainFrame extends JFrame implements ActionListener {
             }
         });
         
-        timer = new Timer(20, this);
+   /*     timer = new Timer(20, this);
         timer.setInitialDelay(100);
         
         setSize(600, 500);
@@ -63,7 +65,7 @@ public class MainFrame extends JFrame implements ActionListener {
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
-    }
+    } 
 
     @Override
     public void actionPerformed(ActionEvent ae) {
@@ -72,4 +74,4 @@ public class MainFrame extends JFrame implements ActionListener {
     }
     
     
-}
+}*/

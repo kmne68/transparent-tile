@@ -10,7 +10,7 @@ import java.awt.Rectangle;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-
+/*
 public class App {
 
     public static void main(String[] args) {
@@ -38,11 +38,11 @@ public class App {
 **/
         
         
-
+/*
         
-    }
+    } 
 
 //   public void paint(Graphics g) {
 //      g.fillRect (5, 15, 50, 75);
 //   }
-}
+}*/

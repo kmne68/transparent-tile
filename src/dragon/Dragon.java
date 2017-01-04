@@ -27,5 +27,5 @@ public class Dragon {
         mainFrame.getContentPane().add(new Map());
         mainFrame.setVisible(true);
         
-    }
+    } 
 }
